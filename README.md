@@ -1,213 +1,70 @@
-# Task-Team-Members
+# Getting Started with Create React App
 
-# 🚀 Employee Management System with Project & Task Management
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-A full-stack web application built using **React.js, Node.js, Express.js, and MySQL** that helps organizations manage employees, tasks, and projects efficiently.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## 📌 Features
+### `npm start`
 
-### 👨‍💼 Employee Management
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-* Add, update, and manage employee details
-* Store employee information like:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-  * Name, Email, Contact
-  * Technology & Position
-  * Salary & Bank Details
-  * Profile Photo upload
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 📋 Task Management
+### `npm run build`
 
-* Assign tasks to employees
-* Set deadlines and descriptions
-* Track task status (pending/completed)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 📁 Project & Team Management
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* Create and manage projects
-* Assign multiple employees to a project
-* Define:
+### `npm run eject`
 
-  * Project Name
-  * Technology (React, PHP, Python, etc.)
-  * Timeline (Deadline)
-  * Team Members
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### 🔐 Authentication
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-* Login system with role-based access
-* Admin / HR can:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-  * Add employees
-  * Assign tasks & projects
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 🛠️ Tech Stack
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Frontend
+### Code Splitting
 
-* React.js
-* Bootstrap
-* Axios
-* SweetAlert2
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Backend
+### Analyzing the Bundle Size
 
-* Node.js
-* Express.js
-* MySQL
-* Multer (file upload)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Database
+### Making a Progressive Web App
 
-* MySQL (XAMPP / Railway)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
----
+### Advanced Configuration
 
-## 📂 Project Structure
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```
-EmployeeManagement/
-│
-├── EmployeeManagement-master/   # Frontend (React)
-│
-├── EmployeeManagement-API/      # Backend (Node.js)
-│   ├── app/
-│   │   ├── config/
-│   │   ├── controller/
-│   │   ├── routes/
-│   │   └── common/
-│   ├── uploads/
-│   └── index.js
-```
+### Deployment
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## ⚙️ Installation & Setup
+### `npm run build` fails to minify
 
-### 🔹 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/EmployeeManagement.git
-cd EmployeeManagement
-```
-
----
-
-### 🔹 2. Backend Setup
-
-```bash
-cd EmployeeManagement-API
-npm install
-npm start
-```
-
----
-
-### 🔹 3. Frontend Setup
-
-```bash
-cd EmployeeManagement-master
-npm install
-npm start
-```
-
----
-
-## 🗄️ Database Setup
-
-Create a MySQL database named:
-
-```
-employe
-```
-
-### Tables:
-
-#### Employee Table (example)
-
-```
-registration
-```
-
-#### Project Table
-
-```sql
-CREATE TABLE project (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  ProjectName VARCHAR(255),
-  Technology VARCHAR(100),
-  EndDate DATE
-);
-```
-
-#### Project Members Table
-
-```sql
-CREATE TABLE project_members (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  project_id INT,
-  employee_id INT
-);
-```
-
----
-
-## 🌐 API Endpoints
-
-| Method | Endpoint         | Description       |
-| ------ | ---------------- | ----------------- |
-| POST   | /signup          | Register employee |
-| POST   | /user_login      | Login             |
-| POST   | /add/task        | Add task          |
-| POST   | /detail/Employee | Get employees     |
-| POST   | /add/project     | Create project    |
-
----
-
-## 🚀 Deployment
-
-* Frontend: Netlify / Vercel
-* Backend: Render
-* Database: Railway / PlanetScale
-
----
-
-## 📸 Screenshots
-
-* Employee Form
-* Task Assignment
-* Project Management
-  (Add screenshots here)
-
----
-
-## 👨‍💻 Author
-
-**Ryan Adlard**
-
-* Web Developer
-* Skilled in React, Node.js, MySQL
-
----
-
-## 📃 License
-
-This project is open-source and available under the MIT License.
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
